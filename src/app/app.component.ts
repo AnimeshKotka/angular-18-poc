@@ -18,6 +18,7 @@ export class AppComponent {
   public tabs: { label: string, action: any }[] = [
     { label: 'Home', action: { redirectTo: 'home' } },
     { label: 'Dynamic Component', action: { redirectTo: 'dynamic-example' } },
+    { label: 'Lazy Loading', action: { redirectTo: 'lazy' } },
   ];
 
   selectTab(tab: any, index: number) {

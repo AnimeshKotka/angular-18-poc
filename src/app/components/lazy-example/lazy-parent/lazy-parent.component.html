@@ -1,0 +1,12 @@
+<p>lazy-parent works!</p>
+
+<div class="tab-bar">
+    <ng-container *ngFor="let tab of tabs; let i = index">
+        <button (click)="selectTab(tab, i)" [class.active]="selectedTabIndex == i">
+            {{ tab.label }}
+        </button>
+    </ng-container>
+</div>
+<div class="tab-content">
+    <router-outlet></router-outlet>
+</div>

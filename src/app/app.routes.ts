@@ -16,5 +16,9 @@ export const routes: Routes = [
     {
         path: 'dynamic-example',
         component: DynamicComponent
+    },
+    {
+        path: 'lazy',
+        loadChildren: () => import('./components/lazy-example/lazy.module').then(m => m.LazyModule)
     }
 ];

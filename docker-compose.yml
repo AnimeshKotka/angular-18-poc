@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  poc-front:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: frontend-poc-dev
+    image: poc-front
+    container_name: frontend-poc-dev
+    ports:
+      - "7880:4200"
+    volumes:
+      - ./:/opt/app/apps/frontend:cached
+      - frontend_node_modules:/opt/app/apps/frontend/node_modules
+volumes:
+  frontend_node_modules:
